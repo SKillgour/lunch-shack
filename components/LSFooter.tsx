@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone, Mail, Facebook, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, ExternalLink, Clock } from "lucide-react";
 
 export default function LSFooter() {
   return (
@@ -151,7 +151,7 @@ export default function LSFooter() {
                 rel="noopener noreferrer"
                 className="ls-footer-fb"
               >
-                <Facebook size={16} />
+                <ExternalLink size={16} />
                 Follow us on Facebook
               </a>
             </div>
