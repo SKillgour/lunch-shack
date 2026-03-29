@@ -1,0 +1,460 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+/* ── Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── Container ── */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* ── Buttons ── */
+.ls-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-accent);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--color-accent);
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition), transform var(--transition);
+  text-decoration: none;
+}
+
+.ls-btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  transform: translateY(-1px);
+}
+
+.ls-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius);
+  border: 2px solid rgba(255,255,255,0.7);
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition), transform var(--transition);
+  text-decoration: none;
+}
+
+.ls-btn-ghost:hover {
+  background-color: rgba(255,255,255,0.12);
+  border-color: #fff;
+  transform: translateY(-1px);
+}
+
+.ls-btn-ghost-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--color-accent);
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition), transform var(--transition);
+  text-decoration: none;
+}
+
+.ls-btn-ghost-dark:hover {
+  background-color: var(--color-accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ── Hero ── */
+.ls-hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--color-primary);
+}
+
+.ls-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 26, 24, 0.82) 0%,
+    rgba(30, 26, 24, 0.58) 60%,
+    rgba(212, 43, 30, 0.18) 100%
+  );
+  z-index: 1;
+}
+
+.ls-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Marquee ── */
+.ls-marquee-strip {
+  background-color: var(--color-dark-surface);
+  padding: 0.85rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.ls-marquee-track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.ls-marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  padding: 0 2rem;
+}
+
+.ls-marquee-dot {
+  color: var(--color-accent-2);
+  margin: 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ── Category Cards ── */
+.ls-category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  border-top: 4px solid transparent;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+  cursor: default;
+}
+
+.ls-category-card:hover {
+  border-top-color: var(--color-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(30, 26, 24, 0.14);
+}
+
+.ls-category-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.ls-category-card:hover .ls-category-card-img {
+  transform: scale(1.04);
+}
+
+/* ── Reveal animations (GSAP targets) ── */
+.ls-reveal {
+  /* no opacity:0 here - GSAP sets it */
+}
+
+.ls-stagger-item {
+  /* no opacity:0 here - GSAP sets it */
+}
+
+/* ── Nav ── */
+.ls-nav-link {
+  position: relative;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  transition: color var(--transition);
+}
+
+.ls-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width var(--transition);
+}
+
+.ls-nav-link:hover::after,
+.ls-nav-link.active::after {
+  width: 100%;
+}
+
+.ls-nav-link:hover {
+  color: var(--color-accent);
+}
+
+/* ── Social Proof ── */
+.ls-stat-number {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--color-accent-2);
+}
+
+/* ── Menu ── */
+.ls-menu-section {
+  margin-bottom: 3.5rem;
+}
+
+.ls-menu-category-title {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  border-left: 5px solid var(--color-accent);
+  padding-left: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.ls-menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--color-surface);
+  gap: 1rem;
+}
+
+.ls-menu-item-name {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.ls-menu-item-desc {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin-top: 0.15rem;
+}
+
+.ls-menu-item-price {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--color-accent);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+/* ── Finder ── */
+.ls-finder {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  border: 2px solid var(--color-surface);
+  transition: border-color var(--transition);
+}
+
+.ls-finder-option {
+  background-color: #fff;
+  border: 2px solid var(--color-surface);
+  border-radius: var(--radius);
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition), transform var(--transition);
+  text-align: center;
+}
+
+.ls-finder-option:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.ls-finder-option.selected {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+.ls-finder-result {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-dark);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-top: 1.5rem;
+  animation: fadeInUp 0.35s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Contact Form ── */
+.ls-form-field {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 2px solid var(--color-surface);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  background-color: #fff;
+  transition: border-color var(--transition);
+  outline: none;
+}
+
+.ls-form-field:focus {
+  border-color: var(--color-accent);
+}
+
+.ls-form-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.03em;
+}
+
+/* ── Hours Table ── */
+.ls-hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  font-size: 0.9rem;
+}
+
+.ls-hours-row:last-child {
+  border-bottom: none;
+}
+
+.ls-hours-day {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-text-on-dark);
+}
+
+.ls-hours-time {
+  color: var(--color-accent-2);
+  font-weight: 500;
+}
+
+/* ── Testimonials ── */
+.ls-testimonial {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  position: relative;
+}
+
+.ls-testimonial::before {
+  content: '"';
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--color-accent);
+  opacity: 0.2;
+  position: absolute;
+  top: -0.5rem;
+  left: 1.25rem;
+  line-height: 1;
+}
+
+/* ── Page Hero (interior pages) ── */
+.ls-page-hero {
+  background-color: var(--color-primary);
+  padding: 5rem 0 3.5rem;
+  color: var(--color-text-on-dark);
+}
+
+/* ── Utilities ── */
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-accent-2 {
+  color: var(--color-accent-2);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
