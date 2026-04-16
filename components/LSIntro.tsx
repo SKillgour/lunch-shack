@@ -13,12 +13,6 @@ export default function LSIntro() {
   const [gone, setGone] = useState(false);
 
   useEffect(() => {
-    // Skip if already shown this session
-    if (sessionStorage.getItem("ls-intro-shown")) {
-      setGone(true);
-      return;
-    }
-
     let i = 0;
     const interval = setInterval(() => {
       i++;
@@ -29,7 +23,6 @@ export default function LSIntro() {
           setExiting(true);
           setTimeout(() => {
             setGone(true);
-            sessionStorage.setItem("ls-intro-shown", "1");
           }, EXIT_DURATION);
         }, HOLD_AFTER_TYPED);
       }
