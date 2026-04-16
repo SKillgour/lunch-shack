@@ -138,8 +138,8 @@ export default function LSHero() {
           display: inline-flex;
           align-items: center;
           gap: 0.4rem;
-          background-color: rgba(212, 43, 30, 0.25);
-          border: 1px solid rgba(212, 43, 30, 0.5);
+          background-color: rgba(42, 184, 232, 0.18);
+          border: 1px solid rgba(42, 184, 232, 0.45);
           color: var(--color-accent-2);
           font-family: var(--font-heading);
           font-weight: 700;
@@ -163,7 +163,7 @@ export default function LSHero() {
         .ls-hero-sub {
           font-family: var(--font-body);
           font-size: clamp(1rem, 2vw, 1.2rem);
-          color: rgba(245, 240, 232, 0.8);
+          color: rgba(240, 246, 250, 0.8);
           line-height: 1.65;
           max-width: 520px;
           margin-bottom: 2.25rem;

@@ -34,7 +34,7 @@ export default function LSFooter() {
         }
         .ls-footer-tagline {
           font-size: 0.9rem;
-          color: rgba(245, 240, 232, 0.6);
+          color: rgba(240, 246, 250, 0.6);
           line-height: 1.6;
           max-width: 280px;
         }
@@ -70,11 +70,11 @@ export default function LSFooter() {
           gap: 0.65rem;
           margin-bottom: 0.85rem;
           font-size: 0.875rem;
-          color: rgba(245, 240, 232, 0.75);
+          color: rgba(240, 246, 250, 0.75);
           line-height: 1.5;
         }
         .ls-footer-info-item a {
-          color: rgba(245, 240, 232, 0.75);
+          color: rgba(240, 246, 250, 0.75);
           transition: color var(--transition);
         }
         .ls-footer-info-item a:hover {
@@ -91,7 +91,7 @@ export default function LSFooter() {
           gap: 1rem;
           font-size: 0.875rem;
           margin-bottom: 0.5rem;
-          color: rgba(245, 240, 232, 0.75);
+          color: rgba(240, 246, 250, 0.75);
         }
         .ls-footer-hours-day {
           font-weight: 600;
@@ -99,6 +99,16 @@ export default function LSFooter() {
         .ls-footer-hours-time {
           color: var(--color-accent-2);
           font-weight: 500;
+        }
+        .ls-footer-hours-time.closed {
+          color: rgba(240, 246, 250,0.4);
+          font-size: 0.875rem;
+        }
+        .ls-footer-hours-note {
+          margin-top: 1rem;
+          font-size: 0.75rem;
+          color: rgba(240, 246, 250,0.4);
+          line-height: 1.5;
         }
         .ls-footer-divider {
           border: none;
@@ -110,7 +120,7 @@ export default function LSFooter() {
           justify-content: space-between;
           align-items: center;
           font-size: 0.8rem;
-          color: rgba(245, 240, 232, 0.4);
+          color: rgba(240, 246, 250, 0.4);
           gap: 1rem;
           flex-wrap: wrap;
         }
@@ -119,11 +129,11 @@ export default function LSFooter() {
           gap: 1.5rem;
         }
         .ls-footer-bottom-links a {
-          color: rgba(245, 240, 232, 0.4);
+          color: rgba(240, 246, 250, 0.4);
           transition: color var(--transition);
         }
         .ls-footer-bottom-links a:hover {
-          color: rgba(245, 240, 232, 0.8);
+          color: rgba(240, 246, 250, 0.8);
         }
         @media (max-width: 768px) {
           .ls-footer-grid {
@@ -189,9 +199,9 @@ export default function LSFooter() {
             </div>
             <div className="ls-footer-hours-row">
               <span className="ls-footer-hours-day">Sunday</span>
-              <span style={{ color: 'rgba(245,240,232,0.4)', fontSize: '0.875rem' }}>Closed</span>
+              <span className="ls-footer-hours-time closed">Closed</span>
             </div>
-            <p style={{ marginTop: '1rem', fontSize: '0.75rem', color: 'rgba(245,240,232,0.4)', lineHeight: '1.5' }}>
+            <p className="ls-footer-hours-note">
               Hours may vary. Check Facebook for updates.
             </p>
           </div>

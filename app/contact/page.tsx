@@ -287,12 +287,12 @@ export default function ContactPage() {
                 <table className="ls-contact-hours-table">
                   <tbody>
                     <tr>
-                      <td>Mon toFri</td>
-                      <td>7:00am to3:00pm</td>
+                      <td>Mon to Fri</td>
+                      <td>7:00am to 3:00pm</td>
                     </tr>
                     <tr>
                       <td>Saturday</td>
-                      <td>8:00am to2:00pm</td>
+                      <td>8:00am to 2:00pm</td>
                     </tr>
                     <tr>
                       <td>Sunday</td>
@@ -404,7 +404,7 @@ export default function ContactPage() {
             <p className="ls-catering-kicker ls-reveal">Feeding the team?</p>
             <h2 className="ls-catering-heading ls-reveal">Catering & Bulk Orders</h2>
             <p className="ls-catering-body ls-reveal">
-              We can cater for team lunches, work events, and function platters. Whether you need a tray of pies, assorted rolls, or a full cabinet spread towe can sort you out. Get in touch to discuss what you need and we'll put something together.
+              We can cater for team lunches, work events, and function platters. Whether you need a tray of pies, assorted rolls, or a full cabinet spread, we can sort you out. Get in touch to discuss what you need and we'll put something together.
             </p>
             <div className="ls-catering-features ls-stagger-group">
               {["Team Lunches", "Work Events", "Function Platters", "Bulk Orders", "Assorted Cabinet Trays"].map((tag) => (
@@ -412,7 +412,7 @@ export default function ContactPage() {
               ))}
             </div>
             <a href="tel:062781349" className="ls-btn-primary ls-reveal">
-              Call to discuss to06-278 1349
+              Call to discuss: 06-278 1349
             </a>
           </div>
         </div>

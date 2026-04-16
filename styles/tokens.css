@@ -1,14 +1,14 @@
 :root {
-  --color-primary: #1e1a18;
-  --color-accent: #d42b1e;
-  --color-accent-2: #e8a020;
-  --color-accent-hover: #b52218;
-  --color-bg: #faf8f5;
-  --color-surface: #f0ece5;
-  --color-dark-surface: #1e1a18;
-  --color-text: #1e1a18;
-  --color-text-muted: #706860;
-  --color-text-on-dark: #f5f0e8;
+  --color-primary: #111820;
+  --color-accent: #2ab8e8;
+  --color-accent-hover: #1a9ec8;
+  --color-accent-2: #90d8f5;
+  --color-bg: #f8f8f8;
+  --color-surface: #eef5f9;
+  --color-dark-surface: #111820;
+  --color-text: #111820;
+  --color-text-muted: #5a6570;
+  --color-text-on-dark: #f0f6fa;
   --font-heading: 'Nunito', sans-serif;
   --font-body: 'Inter', sans-serif;
   --radius: 8px;

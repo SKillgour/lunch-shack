@@ -3,6 +3,7 @@ import "./globals.css";
 import LSHeader from "@/components/LSHeader";
 import LSFooter from "@/components/LSFooter";
 import LSScrollAnimations from "@/components/LSScrollAnimations";
+import LSIntro from "@/components/LSIntro";
 
 export const metadata: Metadata = {
   title: "Lunch Shack | Hawera's Favourite Lunch Spot",
@@ -25,6 +26,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
       </head>
       <body>
+        <LSIntro />
         <LSScrollAnimations />
         <LSHeader />
         <main>{children}</main>

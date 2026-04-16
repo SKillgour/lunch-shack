@@ -26,9 +26,9 @@ function getRecommendation(answers: Record<string, string>): string {
   if (time === "Morning (before 11am)" && vibe === "Something sweet") return "Fresh muffin of the day and a latte. Go on.";
   if (hungry === "Absolutely starving" && time === "Lunchtime (11am-2pm)") return "Soup of the day AND a loaded roll. You won't regret it.";
   if (hungry === "Just a snack" && vibe === "Something warm and savory") return "Sausage roll. Freshly baked. Perfect.";
-  if (time === "Lunchtime (11am-2pm)" && vibe === "Something warm and savory") return "Burger of the day. Check the board -- it changes daily.";
+  if (time === "Lunchtime (11am-2pm)" && vibe === "Something warm and savory") return "Burger of the day. Check the board, it changes daily.";
   if (hungry === "Properly hungry" && vibe === "Something warm and savory") return "Meat pie and a coffee. The Lunch Shack staple.";
-  if (time === "Late afternoon") return "We might be closing up -- check Facebook or call ahead. Or grab a scroll on your way out.";
+  if (time === "Late afternoon") return "We might be closing up. Check Facebook or call ahead. Or grab a scroll on your way out.";
   return "Honestly? Just come in and see what's in the cabinet. It's always good.";
 }
 

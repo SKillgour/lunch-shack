@@ -34,7 +34,7 @@ export default function LSHeader() {
         }
         .ls-header--scrolled {
           background-color: var(--color-bg);
-          box-shadow: 0 2px 20px rgba(30,26,24,0.10);
+          box-shadow: 0 2px 20px rgba(17,24,32,0.10);
         }
         .ls-header-inner {
           display: flex;
