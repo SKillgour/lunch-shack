@@ -3,7 +3,7 @@ import LSMarquee from "@/components/LSMarquee";
 import Image from "next/image";
 import Link from "next/link";
 
-const STORY_IMG = "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=900&q=80";
+const STORY_IMG = "https://images.unsplash.com/photo-1769615020959-8a17bd77e849?w=900&q=80";
 
 export default function HomePage() {
   return (
@@ -260,7 +260,7 @@ export default function HomePage() {
             <div className="ls-svc-card ls-svc-card--tall ls-stagger-item">
               <div className="ls-svc-card-img-wrap">
                 <Image
-                  src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=700&q=80"
+                  src="https://images.unsplash.com/photo-1769615020959-8a17bd77e849?w=700&q=80"
                   alt="Fresh breads and scrolls baked at the Lunch Shack every morning"
                   fill
                   sizes="(max-width: 768px) 100vw, 55vw"
@@ -493,7 +493,7 @@ export default function HomePage() {
             </div>
             <div className="ls-gallery-item ls-stagger-item">
               <Image
-                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=700&q=80"
+                src="https://images.unsplash.com/photo-1769615020959-8a17bd77e849?w=700&q=80"
                 alt="Fresh baked breads and scrolls"
                 fill
                 sizes="(max-width: 900px) 50vw, 25vw"
