@@ -201,21 +201,14 @@ export default function ContactPage() {
             line-height: 1.6;
             margin-bottom: 1.75rem;
           }
-          .ls-map-placeholder {
-            background-color: rgba(255,255,255,0.06);
-            border: 1.5px solid rgba(255,255,255,0.12);
+          .ls-map-embed {
             border-radius: var(--radius);
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            overflow: hidden;
+            height: 220px;
             margin-bottom: 1.5rem;
-            color: rgba(245,240,232,0.35);
-            font-family: var(--font-heading);
-            font-weight: 700;
-            font-size: 0.85rem;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
+            border: none;
+            width: 100%;
+            display: block;
           }
           .ls-map-gmaps-link {
             display: inline-flex;
@@ -325,9 +318,13 @@ export default function ContactPage() {
                   79 High Street, Hawera<br />
                   South Taranaki, New Zealand
                 </p>
-                <div className="ls-map-placeholder">
-                  Map
-                </div>
+                <iframe
+                  className="ls-map-embed"
+                  src="https://maps.google.com/maps?q=79+High+Street,+Hawera,+South+Taranaki,+New+Zealand&output=embed&z=16"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Lunch Shack location"
+                />
                 <a
                   href="https://maps.google.com/?q=79+High+Street+Hawera+South+Taranaki"
                   target="_blank"
